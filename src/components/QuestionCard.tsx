@@ -13,21 +13,27 @@ type PropsType = {
 const QuestionCard: FC<PropsType> = props => {
   const { id, title, isPublished, deleteQuestion, publishQuestion } = props
 
-  function edit(id: string) {
-    console.log('edit', id)
+  function publish(id: string) {
+    publishQuestion && publishQuestion(id)
   }
 
   function del(id: string) {
     deleteQuestion && deleteQuestion(id)
   }
 
-  function publish(id: string) {
-    publishQuestion && publishQuestion(id)
-  }
+  // useEffect(() => {
+  //   console.log('question card mounted')
+
+  //   return () => {
+  //     console.log('question card unmounted', id) // 销毁
+  //   }
+
+  //   // 生命周期：创建，更新（state 变化），销毁
+  // }, [])
 
   // let itemClassName = 'list-item'
   // if (isPublished) itemClassName += ' published'
-  // 逻辑稍微复杂
+  // // 逻辑稍微复杂
 
   // const itemClassName = classnames('list-item', { published: isPublished })
   // const itemClassName = classnames({
@@ -44,11 +50,11 @@ const QuestionCard: FC<PropsType> = props => {
 
   return (
     //   <div key={id} className={itemClassName}>
-    <div key={id} className="list-item">
+    <div key={id}>
       <strong>{title}</strong>
       &nbsp;
       {/* 条件判断 */}
-      {isPublished ? <span style={{ color: 'green' }}>已发布</span> : <span>未发布</span>}
+      {/* {isPublished ? <span className={styles['published-span']}>已发布</span> : <span>未发布</span>} */}
       {isPublished ? <span>已发布</span> : <span>未发布</span>}
       &nbsp;
       <button
@@ -66,7 +72,6 @@ const QuestionCard: FC<PropsType> = props => {
       >
         删除问卷
       </button>
-      &nbsp;
     </div>
   )
 }
