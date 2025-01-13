@@ -1,4 +1,5 @@
 import React, { FC, useState } from 'react'
+import { produce } from 'immer'
 import QuestionCard from './components/QuestionCard'
 
 const List2: FC = () => {
@@ -11,12 +12,23 @@ const List2: FC = () => {
 
   function add() {
     const r = Math.random().toString().slice(-3)
+    // setQuestionList(
+    //   // 新增 concat
+    //   questionList.concat({
+    //     id: 'q' + Math.random().toString().slice(-3),
+    //     title: '问卷' + r,
+    //     isPublished: false,
+    //   })
+    // )
+
+    // immer 的方式
     setQuestionList(
-      // 新增用concat
-      questionList.concat({
-        id: 'q' + Math.random().toString().slice(-3),
-        title: '问卷' + r,
-        isPublished: false,
+      produce(draft => {
+        draft.push({
+          id: 'q' + r,
+          title: '问卷' + r,
+          isPublished: false,
+        })
       })
     )
   }
@@ -24,7 +36,7 @@ const List2: FC = () => {
   function deleteQuestion(id: string) {
     // 不可变数据
     setQuestionList(
-      // 删除用filter
+      // 删除 filter
       questionList.filter(q => {
         if (q.id !== id) {
           return true
@@ -36,15 +48,23 @@ const List2: FC = () => {
   }
 
   function publishQuestion(id: string) {
-    setQuestionList(
-      // 修改map
-      questionList.map(q => {
-        if (q.id !== id) return q
+    // setQuestionList(
+    //   // 修改 map
+    //   questionList.map(q => {
+    //     if (q.id !== id) return q
 
-        return {
-          ...q,
-          isPublished: true,
-        }
+    //     return {
+    //       ...q,
+    //       isPublished: true,
+    //     }
+    //   })
+    // )
+
+    // immer 方式
+    setQuestionList(
+      produce(draft => {
+        const q = draft.find(item => item.id === id)
+        if (q) q.isPublished = true
       })
     )
   }
