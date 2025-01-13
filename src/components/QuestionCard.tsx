@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, useEffect } from 'react'
 
 // ts 自定义类型
 type PropsType = {
@@ -24,6 +24,13 @@ const QuestionCard: FC<PropsType> = props => {
   function publish(id: string) {
     publishQuestion && publishQuestion(id)
   }
+
+  // useEffect(() => {
+  //   console.log('question card mounted!')
+  //   return () => {
+  //     console.log('question card unmounted!', id)
+  //   }
+  // }, [])
 
   // let itemClassName = 'list-item'
   // if (isPublished) itemClassName += ' published'
