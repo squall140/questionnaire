@@ -1,0 +1,14 @@
+.list-item{
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 16px;
+    
+    // nested scss
+    .published-span{
+        color: green;
+    }
+}
+
+.published {
+    border-color: rgb(0, 0, 0);
+} 

@@ -1,6 +1,6 @@
 import React from 'react'
 // import StateDemo from './StateDemo'
-// import List2 from './List2'
+import List2 from './List2'
 // import Demo from './ImmerDemo'
 // import CallBackDemo from './UseCallbackDemo'
 // import useTitle from './hooks/useTitle'
@@ -9,7 +9,7 @@ import React from 'react'
 // ahooks
 // import { useTitle } from 'ahooks'
 // import { useMouse } from 'ahooks'
-import ClosureTrap from './ClosureTrap'
+// import ClosureTrap from './ClosureTrap'
 
 function App() {
   // Custom hooks
@@ -23,10 +23,10 @@ function App() {
       <p>App page</p>
       {/* <p>{loading ? 'Loading...' : info}</p> */}
       {/* <StateDemo /> */}
-      {/* <List2 /> */}
+      <List2 />
       {/* <Demo /> */}
       {/* <CallBackDemo /> */}
-      <ClosureTrap />
+      {/* <ClosureTrap /> */}
     </>
   )
 }
