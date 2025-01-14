@@ -1,4 +1,7 @@
 import React, { FC, useEffect } from 'react'
+// import './QuestionCard.css'
+// import classNames from 'classnames'
+import styles from './QuestionCard.module.css'
 
 // ts 自定义类型
 type PropsType = {
@@ -49,9 +52,12 @@ const QuestionCard: FC<PropsType> = props => {
   //   [publishedClass]: isPublished,
   // })
 
+  // use ClassNames plugin
+  // const itemClassName = classNames('list-item', { published: isPublished })
+
   return (
     //   <div key={id} className={itemClassName}>
-    <div key={id} className="list-item">
+    <div key={id} className={styles['list-item']}>
       <strong>{title}</strong>
       &nbsp;
       {/* 条件判断 */}
