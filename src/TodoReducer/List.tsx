@@ -1,11 +1,11 @@
 import React, { FC, useReducer, useContext } from 'react'
-// import { TodoContext } from './index'
-import reducer from './reducer'
-import initialState from './store'
+import { TodoContext } from './index'
+// import reducer from './reducer'
+// import initialState from './store'
 
 const List: FC = () => {
-  const [state, dispatch] = useReducer(reducer, initialState)
-  // const { state, dispatch } = useContext(TodoContext)
+  // const [state, dispatch] = useReducer(reducer, initialState)
+  const { state, dispatch } = useContext(TodoContext)
 
   function del(id: string) {
     dispatch({ type: 'delete', payload: id })
