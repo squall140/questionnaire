@@ -1,6 +1,6 @@
 import React from 'react'
 // import StateDemo from './StateDemo'
-import List2 from './List2'
+// import List2 from './List2'
 // import Demo from './ImmerDemo'
 // import CallBackDemo from './UseCallbackDemo'
 // import useTitle from './hooks/useTitle'
@@ -10,6 +10,8 @@ import List2 from './List2'
 // import { useTitle } from 'ahooks'
 // import { useMouse } from 'ahooks'
 // import ClosureTrap from './ClosureTrap'
+// import CountReducer from './CountReducer'
+import TodoReducer from './TodoReducer'
 
 function App() {
   // Custom hooks
@@ -20,13 +22,15 @@ function App() {
 
   return (
     <>
-      <p>App page</p>
+      {/* <p>App page</p> */}
       {/* <p>{loading ? 'Loading...' : info}</p> */}
       {/* <StateDemo /> */}
-      <List2 />
+      {/* <List2 /> */}
       {/* <Demo /> */}
       {/* <CallBackDemo /> */}
       {/* <ClosureTrap /> */}
+      {/* <CountReducer /> */}
+      <TodoReducer />
     </>
   )
 }
