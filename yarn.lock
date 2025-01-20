@@ -6981,6 +6981,11 @@
   "resolved" "https://registry.npmmirror.com/nanoid/-/nanoid-3.3.8.tgz"
   "version" "3.3.8"
 
+"nanoid@^5.0.9":
+  "integrity" "sha512-Aooyr6MXU6HpvvWXKoVoXwKMs/KyVakWwg7xQfv5/S/RIgJMy0Ifa45H9qqYy7pTCszrHzP21Uk4PZq2HpEM8Q=="
+  "resolved" "https://registry.npmmirror.com/nanoid/-/nanoid-5.0.9.tgz"
+  "version" "5.0.9"
+
 "natural-compare-lite@^1.4.0":
   "integrity" "sha512-Tj+HTDSJJKaZnfiuw+iaF9skdPpTo2GtEly5JHnWV/hfv2Qj/9RKsGISQtLh2ox3l5EAGw487hnBee0sIJ6v2g=="
   "resolved" "https://registry.npmmirror.com/natural-compare-lite/-/natural-compare-lite-1.4.0.tgz"

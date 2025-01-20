@@ -1,5 +1,4 @@
 import React from 'react'
-import CountRedux from './CountRedux'
 // import StateDemo from './StateDemo'
 // import List2 from './List2'
 // import Demo from './ImmerDemo'
@@ -13,6 +12,8 @@ import CountRedux from './CountRedux'
 // import ClosureTrap from './ClosureTrap'
 // import CountReducer from './CountReducer'
 // import TodoReducer from './TodoReducer'
+// import CountRedux from './pages/CountRedux'
+import TodoListRedux from './pages/TodoListRedux'
 
 function App() {
   // Custom hooks
@@ -32,7 +33,8 @@ function App() {
       {/* <ClosureTrap /> */}
       {/* <CountReducer /> */}
       {/* <TodoReducer /> */}
-      <CountRedux />
+      {/* <CountRedux /> */}
+      <TodoListRedux />
     </>
   )
 }
