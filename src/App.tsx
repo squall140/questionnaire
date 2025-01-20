@@ -1,4 +1,5 @@
 import React from 'react'
+import CountRedux from './CountRedux'
 // import StateDemo from './StateDemo'
 // import List2 from './List2'
 // import Demo from './ImmerDemo'
@@ -11,7 +12,7 @@ import React from 'react'
 // import { useMouse } from 'ahooks'
 // import ClosureTrap from './ClosureTrap'
 // import CountReducer from './CountReducer'
-import TodoReducer from './TodoReducer'
+// import TodoReducer from './TodoReducer'
 
 function App() {
   // Custom hooks
@@ -30,7 +31,8 @@ function App() {
       {/* <CallBackDemo /> */}
       {/* <ClosureTrap /> */}
       {/* <CountReducer /> */}
-      <TodoReducer />
+      {/* <TodoReducer /> */}
+      <CountRedux />
     </>
   )
 }
